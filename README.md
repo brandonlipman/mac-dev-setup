@@ -301,13 +301,13 @@ Now for the color. I'm going to change two things: the **Theme** (which is how t
 
 A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run:
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
     
-Then go to **Sublime Text 2 > Preferences > Settings - User** and add the following two lines:
+Then go to **Sublime Text> Preferences > Settings - User** and add the following two lines:
 
-    "theme": "Soda Dark.sublime-theme",
-    "soda_classic_tabs": true
+    "theme": "Adaptive.sublime-theme",
+    "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
 
 Restart Sublime Text for all changes to take effect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
 
