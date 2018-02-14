@@ -308,6 +308,8 @@ Then go to **Sublime Text> Preferences > Settings - User** and add the following
 
     "theme": "Adaptive.sublime-theme",
     "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+Final settings:
+<a href="http://share.redwhale.co/pXHn" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/0D3E2j1q1O463U1s1W30/Image%202018-02-14%20at%2012.28.36%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
 Restart Sublime Text for all changes to take effect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
 
