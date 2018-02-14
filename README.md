@@ -313,11 +313,11 @@ Final settings:
 
 Restart Sublime Text for all changes to take effect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
 
-The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text 2 > Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
+The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text> Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
 
-Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
+Sublime Text already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     $ git clone https://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
     $ git clone https://github.com/miksago/jade-tmbundle Jade
     $ git clone https://github.com/danro/LESS-sublime.git LESS
@@ -328,7 +328,7 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 
     $ cd ~
     $ mkdir bin
-    $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
@@ -364,7 +364,23 @@ With that, Vim will look a lot better next time you open it!
 
 ## Python
 
-OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python 2.7.
+OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python. 
+
+### Python Version Control
+We also want to setup Python Version Manager that way we can easily run projects that require Python2 or Python3 without issues or conflicts.
+
+For this we will use Pyenv. See [install instructions](https://github.com/pyenv/pyenv#installation).
+
+    $ brew install pyenv
+
+Then edit the .bash_profile (had issue) and this was the solution accordoing to [this answer](https://github.com/pyenv/pyenv/issues/427)
+
+    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+
+Now you should be able install different versions of python. 
 
 The following command will install Python 2.7 and any dependencies required (it can take a few minutes to build everything):
 
