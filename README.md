@@ -366,7 +366,7 @@ With that, Vim will look a lot better next time you open it!
 
 OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python. 
 
-### Python Version Control
+### Python Version Control (Need more info)
 We also want to setup Python Version Manager that way we can easily run projects that require Python2 or Python3 without issues or conflicts.
 
 For this we will use Pyenv. See [install instructions](https://github.com/pyenv/pyenv#installation).
@@ -463,11 +463,11 @@ It will get installed in the `venv` folder, and not conflict with other projects
 As mentioned earlier, I like to install big packages (like Numpy), or packages I always use (like IPython) globally. All the rest I install in a virtualenv.
 
 ## IPython
-
+NO
 [IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
 
 ### Install
-
+No
 Before we install IPython, we'll need to get some dependencies. Run the following:
 
     $ brew update # Always good to do
@@ -501,7 +501,7 @@ Open a fresh terminal. Now when you run `$ ipy`, it will launch the QT Console w
 To use the in-line Matplotlib functionality (nice for scientific computing), run `$ ipy --pylab=inline`.
 
 ## Numpy and Scipy
-
+NO
 The [Numpy](http://numpy.scipy.org/) and [Scipy](http://www.scipy.org/SciPy) scientific libraries for Python are always a little tricky to install from source because they have all these dependencies they need to build correctly. Luckily for us, [Samuel John](http://www.samueljohn.de/) has put together some [Homebrew formulae](https://github.com/samueljohn/homebrew-python) to make it easier to install these Python libraries.
 
 First, grab the special formulae (which are not part of Homebrew core):
@@ -519,7 +519,7 @@ Finally, you can install Numpy and Scipy with:
     $ brew install scipy
     
 (It may take a few minutes to build.)
-
+## Postgres add
 ## MySQL
 
 ### Install
