@@ -32,6 +32,7 @@ The document assumes you are new to Mac. Originally steps below were tested on *
 - [Projects folder](#projects-folder)
 - [Apps](#apps)
 
+
 ## System update
 
 First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > Software Update...**
@@ -73,6 +74,35 @@ In the tab **Profiles**, create a new one with the "+" icon, and rename it to yo
 
 When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
 
+## 1Password
+Download this from AppStore.
+
+## Slack
+Download this from AppStore.
+
+## WindowTidy
+Download this from AppStore.
+
+## Alfred App
+Download this from [here](https://www.dropbox.com/downloading).
+Look up the licence info via email. Sent from license@alfredapp.com. 
+Click [here](https://mail.google.com/mail/u/1/#search/license%40alfredapp.com) for Gmail search.
+
+Preferance file is in Dropbox.
+
+## Omnifocus Omnigraffle and Omniplan
+Download Omnifocus from [here](https://www.omnigroup.com/omnifocus).
+Download Omnigraffle from [here](https://www.omnigroup.com/omnigraffle).
+Download Omniplan from [here](https://www.omnigroup.com/omniplan).
+Look up the licence info via email. Sent from sales@omnigroup.com. 
+Click [here](https://mail.google.com/mail/u/1/#search/sales%40omnigroup.com) for Gmail search.
+
+Setup omnisync for omnifoucs and pin to left side of doc
+
+
+## Dropbox
+Download this from [here](https://www.dropbox.com/downloading).
+
 ## Atom
 [Atom](https://atom.io/) download this.
 
@@ -82,6 +112,9 @@ When done, hit the red "X" in the upper left (saving is automatic in OS X prefer
 ## Microsoft Office 2016 for Mac
 [Link to Login to Office365](https://login.microsoftonline.com/common/oauth2/authorize) download this.
 <a href="http://share.redwhale.co/pXEC" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/1M2q0I0r3q27420C060S/Image%202018-02-14%20at%2011.59.49%20AM.png" style="display: block;height: auto;width: 100%;"/></a>
+
+## CloudApp for Screenshots
+Download that [here](https://www.getcloudapp.com/download/mac).
 
 ## Homebrew
 
