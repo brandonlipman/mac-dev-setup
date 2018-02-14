@@ -1,10 +1,9 @@
 # Mac OS X Dev Setup
+Updating this setup with a few tweaks for me. 
 
 This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
-The document assumes you are new to Mac. The steps below were tested on **OS X Mountain Lion**.
-
-If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/nicolahery)!
+The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra.
 
 - [System update](#system-update)
 - [System preferences](#system-preferences)
@@ -40,6 +39,12 @@ First thing you need to do, on any OS actually, is update the system! For that: 
 ## System preferences
 
 If this is a new computer, there are a couple tweaks I like to make to the System Preferences. Feel free to follow these, or to ignore them, depending on your personal preferences.
+- Make sure filevault is off
+- Setup TouchID
+- Remove Guest Account and set automatic selection of user at login
+- Add right click for Mouse and speed up the tracking speed
+- Add network printers and scanners
+
 
 In **Apple Icon > System Preferences**:
 
