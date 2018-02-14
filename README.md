@@ -44,14 +44,12 @@ If this is a new computer, there are a couple tweaks I like to make to the Syste
 - Remove Guest Account and set automatic selection of user at login
 - Add right click for Mouse and speed up the tracking speed
 - Add network printers and scanners
+- Remove spotlight keyboard shortcut
 
 
 In **Apple Icon > System Preferences**:
 
 - Trackpad > Tap to click
-- Keyboard > Key Repeat > Fast (all the way to the right)
-- Keyboard > Delay Until Repeat > Short (all the way to the right)
-- Dock > Automatically hide and show the Dock
 
 ## Google Chrome
 
@@ -63,15 +61,27 @@ Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/brow
 
 Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
 
+No licence needed.
+
 In **Finder**, drag and drop the **iTerm** Application file into the **Applications** folder.
 
 You can now launch iTerm, through the **Launchpad** for instance.
 
-Let's just quickly change some preferences. In **iTerm > Preferences...**, under the tab **General**, uncheck **Confirm closing multiple sessions** and **Confirm "Quit iTerm2 (Cmd+Q)" command** under the section **Closing**.
+Let's just quickly change some preferences. In **iTerm > Preferences...**, under the tab **General**, uncheck **Confirm closing multiple sessions**
 
 In the tab **Profiles**, create a new one with the "+" icon, and rename it to your first name for example. Then, select **Other Actions... > Set as Default**. Finally, under the section **Window**, change the size to something better, like **Columns: 125** and **Rows: 35**.
 
 When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
+
+## Atom
+[Atom](https://atom.io/) download this.
+
+## Sourcetree
+[Sourcetree](https://www.sourcetreeapp.com/) download this.
+
+## Microsoft Office 2016 for Mac
+[Link to Login to Office365](https://login.microsoftonline.com/common/oauth2/authorize) download this.
+<a href="http://share.redwhale.co/pXEC" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/1M2q0I0r3q27420C060S/Image%202018-02-14%20at%2011.59.49%20AM.png" style="display: block;height: auto;width: 100%;"/></a>
 
 ## Homebrew
 
