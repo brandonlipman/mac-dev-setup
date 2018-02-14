@@ -1,6 +1,6 @@
 # Mac OS X Dev Setup
 Updating this setup with a few tweaks for me. 
-
+Add in https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
 This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
 The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra.
