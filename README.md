@@ -1,5 +1,5 @@
-# Mac OS X Dev Setup
-Updating this setup with a few tweaks for me. 
+Preference# Mac OS X Dev Setup
+Updating this setup with a few tweaks for me.
 Add in https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
 This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
@@ -58,6 +58,13 @@ Install your favorite browser, mine happens to be Chrome.
 
 Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
 
+Sign into using gmail account then switch account to set default to business account.
+
+## Install AdBlock Chrome + Safari
+https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom?hl=en-US
+https://getadblock.com/
+
+
 ## iTerm2
 
 Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
@@ -75,17 +82,22 @@ In the tab **Profiles**, create a new one with the "+" icon, and rename it to yo
 When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
 
 ## 1Password
-Download this from AppStore.
+Download this from App Store.
+https://itunes.apple.com/us/app/1password-7-password-manager/id1333542190?mt=12
+Install browser extensions
 
 ## Slack
-Download this from AppStore.
+Download this from App Store or get beta from site.
+https://itunes.apple.com/us/app/slack/id803453959?mt=12
+https://slack.com/beta/mac
 
 ## WindowTidy
 Download this from AppStore.
-
+https://itunes.apple.com/us/app/window-tidy/id456609775?mt=12
 
 ## Skype
 Download this.
+https://www.skype.com/en/get-skype/
 
 ## Sketch The UI/UX Design Tools
 Download this.
@@ -95,8 +107,9 @@ Download this.
 Download this.
 
 ## Alfred App
-Download this from [here](https://www.dropbox.com/downloading).
-Look up the licence info via email. Sent from license@alfredapp.com. 
+Download this from website not App Store https://www.alfredapp.com/.
+
+Look up the license info via email. Sent from license@alfredapp.com.
 Click [here](https://mail.google.com/mail/u/1/#search/license%40alfredapp.com) for Gmail search.
 
 Preferance file is in Dropbox.
@@ -105,7 +118,7 @@ Preferance file is in Dropbox.
 Download Omnifocus from [here](https://www.omnigroup.com/omnifocus).
 Download Omnigraffle from [here](https://www.omnigroup.com/omnigraffle).
 Download Omniplan from [here](https://www.omnigroup.com/omniplan).
-Look up the licence info via email. Sent from sales@omnigroup.com. 
+Look up the licence info via email. Sent from sales@omnigroup.com.
 Click [here](https://mail.google.com/mail/u/1/#search/sales%40omnigroup.com) for Gmail search.
 
 Setup omnisync for omnifoucs and pin to left side of doc
@@ -117,15 +130,21 @@ Download this from [here](https://www.dropbox.com/downloading).
 ## Atom
 [Atom](https://atom.io/) download this.
 
+I am using Sync-Settings an Atom package that does the syncing of all packages and such.
+https://atom.io/packages/sync-settings
+
 ## Sourcetree
-[Sourcetree](https://www.sourcetreeapp.com/) download this.
+[Sourcetree](https://www.sourcetreeapp.com/) download this. Setup repos in Projects folder within Development. ssh setup too
 
 ## Microsoft Office 2016 for Mac
 [Link to Login to Office365](https://login.microsoftonline.com/common/oauth2/authorize) download this.
-<a href="http://share.redwhale.co/pXEC" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/1M2q0I0r3q27420C060S/Image%202018-02-14%20at%2011.59.49%20AM.png" style="display: block;height: auto;width: 100%;"/></a>
+``<a href="http://share.redwhale.co/pXEC" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/1M2q0I0r3q27420C060S/Image%202018-02-14%20at%2011.59.49%20AM.png" style="display: block;height: auto;width: 100%;"/></a>``
 
 ## CloudApp for Screenshots
 Download that [here](https://www.getcloudapp.com/download/mac).
+
+## Facebook Messenger for Mac
+https://fbmacmessenger.rsms.me/
 
 ## Homebrew
 
@@ -152,17 +171,17 @@ One thing we need to do is tell the system to use programs installed by Hombrew 
 Open a new terminal tab with **Cmd+T** (you should also close the old one), then run the following command to make sure everything works:
 
     $ brew doctor
-    
+
 ### Usage
 
 To install a package (or **Formula** in Homebrew vocabulary) simply type:
 
     $ brew install <formula>
-        
+
 To update Homebrew's directory of formulae, run:
 
     $ brew update
-    
+
 **Note**: I've seen that command fail sometimes because of a bug. If that ever happens, run the following (when you have Git installed):
 
     $ cd /usr/local
@@ -172,11 +191,11 @@ To update Homebrew's directory of formulae, run:
 To see if any of your packages need to be updated:
 
     $ brew outdated
-    
+
 To update a package:
 
     $ brew upgrade <formula>
-        
+
 Homebrew keeps older versions of packages installed, in case you want to roll back. That rarely is necessary, so you can do some cleanup to get rid of those old versions:
 
     $ brew cleanup
@@ -227,7 +246,7 @@ We'll come back to the details of that later, but for now, just download the fil
     $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile
     $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt
     $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases
-    
+
 With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
 
 At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**. For example, I changed mine from "Nicolas's MacBook Air" to just "MacBook Air", so it shows up as `MacBook-Air` in the terminal.
@@ -239,18 +258,18 @@ Now we have a terminal we can work with!
 ### Setup Profiles and auto login using triggers
 https://mediatemple.net/community/products/dv/204403684/connecting-via-ssh-to-your-server
 
-## Windows VM via Appstore 
+## Windows VM via Appstore
 
 ## Git
 
 What's a developer without [Git](http://git-scm.com/)? To install, simply run:
 
     $ brew install git
-    
+
 When done, to test that it installed fine you can run:
 
     $ git --version
-    
+
 And `$ which git` should output `/usr/local/bin/git`.
 
 Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig) file to your home directory:
@@ -270,9 +289,9 @@ They will get added to your `.gitconfig` file.
 To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
 
     $ git config --global credential.helper osxkeychain
-    
+
 **Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/nicolashery/mac-dev-setup/blob/master/.gitignore) file for inspiration.
-    
+
 ## Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
@@ -302,7 +321,7 @@ Just like the terminal, let's configure our editor a little. Go to **Sublime Tex
     "indent_to_bracket": true
 }
 ```
-    
+
 Feel free to tweak these to your preference. When done, save the file and close it.
 
 I use tab size 2 for everything except Python and Markdown files, where I use tab size 4. If you have a Python and Markdown file handy (or create dummy ones with `$ touch dummy.py`), for each one, open it and go to **Sublime Text 2 > Preferences > Settings - More > Syntax Specific - User** to paste in:
@@ -319,7 +338,7 @@ A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). T
 
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
-    
+
 Then go to **Sublime Text> Preferences > Settings - User** and add the following two lines:
 
     "theme": "Adaptive.sublime-theme",
@@ -380,7 +399,7 @@ With that, Vim will look a lot better next time you open it!
 
 ## Python
 
-OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python. 
+OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python.
 
 ### Python Version Control (Need more info)
 We also want to setup Python Version Manager that way we can easily run projects that require Python2 or Python3 without issues or conflicts.
@@ -396,31 +415,31 @@ Then edit the .bash_profile (had issue) and this was the solution accordoing to 
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 
-Now you should be able install different versions of python. 
+Now you should be able install different versions of python.
 
 The following command will install Python 2.7 and any dependencies required (it can take a few minutes to build everything):
 
     $ brew install python
-    
+
 When finished, you should get a summary in the terminal. Running `$ which python` should output `/usr/local/bin/python`.
 
 It also installed [Pip]() (and its dependency [Distribute]()), which is the package manager for Python. Let's upgrade them both:
 
     $ pip install --upgrade distribute
     $ pip install --upgrade pip
-    
+
 Executable scripts from Python packages you install will be put in `/usr/local/share/python`, so let's add it to the `$PATH`. To do so, we'll create a `.path` text file in the home directory (I've already set up `.bash_profile` to call this file):
 
     $ cd ~
     $ subl .path
-    
+
 And add these lines to `.path`:
 
 ```bash
 PATH=/usr/local/share/python:$PATH
 export PATH
 ```
-    
+
 Save the file and open a new terminal to take the new `$PATH` into account (everytime you open a terminal, `.bash_profile` gets loaded).
 
 ### Pip Usage
@@ -432,11 +451,11 @@ Here are a couple Pip commands to get you started. To install a Python package:
 To upgrade a package:
 
     $ pip install --upgrade <package>
-        
+
 To see what's installed:
 
     $ pip freeze
-    
+
 To uninstall a package:
 
     $ pip uninstall <package>
@@ -459,7 +478,7 @@ Let's say you have a project in a directory called `myproject`. To set up virtua
 
     $ cd myproject/
     $ virtualenv venv --distribute
-    
+
 If you want your virtualenv to also inherit globally installed packages (like IPython or Numpy mentioned above), use:
 
     $ virtualenv venv --distribute --system-site-packages
@@ -467,7 +486,7 @@ If you want your virtualenv to also inherit globally installed packages (like IP
 These commands create a `venv` subdirectory in your project where everything is installed. You need to **activate** it first though (in every terminal where you are working on your project):
 
     $ source venv/bin/activate
-    
+
 You should see a `(venv)` appear at the beginning of your terminal prompt indicating that you are working inside the virtualenv. Now when you install something:
 
     $ pip install <package>
@@ -489,7 +508,7 @@ Before we install IPython, we'll need to get some dependencies. Run the followin
     $ brew update # Always good to do
     $ brew install zeromq # Necessary for pyzmq
     $ brew install pyqt # Necessary for the qtconsole
-    
+
 It may take a few minutes to build these.
 
 Once it's done, we can install IPython with all the available options:
@@ -501,17 +520,17 @@ Once it's done, we can install IPython with all the available options:
 You can launch IPython from the command line with `$ ipython`, but what's more interesting is to use its [QT Console](http://ipython.org/ipython-doc/stable/interactive/qtconsole.html). Launch the QT Console by running:
 
     $ ipython qtconsole
-    
+
 You can also customize the font it uses:
 
     $ ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13
-    
+
 And since I'm lazy and I don't want to type or copy & paste that all the time, I'm going to create an alias for it. Create a `.extra` text file in your home directory with `$ subl ~/.extra` (I've set up `.bash_profile` to load `.extra`), and add the following line:
 
 ```bash
 alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13'
 ```
-    
+
 Open a fresh terminal. Now when you run `$ ipy`, it will launch the QT Console with your configured options.
 
 To use the in-line Matplotlib functionality (nice for scientific computing), run `$ ipy --pylab=inline`.
@@ -524,16 +543,16 @@ First, grab the special formulae (which are not part of Homebrew core):
 
     $ brew tap samueljohn/python
     $ brew tap homebrew/science
-    
+
 Then, install the `gfortran` dependency (now in `gcc`) which we will need to build the libraries:
 
     $ brew install gcc
-    
+
 Finally, you can install Numpy and Scipy with:
 
     $ brew install numpy
     $ brew install scipy
-    
+
 (It may take a few minutes to build.)
 ## Postgres add
 ## MySQL
@@ -558,19 +577,19 @@ As you can see in the ouput from Homebrew, before we can use MySQL we first need
 To start the MySQL server, use the `mysql.server` tool:
 
     $ mysql.server start
-    
+
 To stop it when you are done, run:
 
     $ mysql.server stop
-    
+
 You can see the different commands available for `mysql.server` with:
 
     $ mysql.server --help
-    
+
 To connect with the command-line client, run:
 
     $ mysql -uroot
-    
+
 (Use `exit` to quit the MySQL shell.)
 
 **Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
@@ -587,7 +606,7 @@ Install [Node.js](http://nodejs.org/) with Homebrew:
 
     $ brew update
     $ brew install node
-    
+
 The formula also installs the [npm](https://npmjs.org/) package manager. However, as suggested by the Homebrew output, we need to add `/usr/local/share/npm/bin` to our path so that npm-installed modules with executables will have them picked up.
 
 To do so, add this line to your `~/.path` file, before the `export PATH` line:
@@ -595,7 +614,7 @@ To do so, add this line to your `~/.path` file, before the `export PATH` line:
 ```bash
 PATH=/usr/local/share/npm/bin:$PATH
 ```
-        
+
 Open a new terminal for the `$PATH` changes to take effect.
 
 We also need to tell npm where to find the Xcode Command Line Tools, by running:
@@ -641,9 +660,9 @@ To uninstall a package:
 
 ##JSHint
 
-JSHint is a JavaScript developer's best friend. 
+JSHint is a JavaScript developer's best friend.
 
-If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text. 
+If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text.
 
 Install JSHint via npm (global install preferred)
 
@@ -660,7 +679,7 @@ Like Python, [Ruby](http://www.ruby-lang.org/) is already installed on Unix syst
 When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Version Manager) which allows you to manage multiple versions of Ruby on the same machine. Installing RVM, as well as the latest version of Ruby, is very easy. Just run:
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
-    
+
 When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
 
 ```bash
@@ -672,7 +691,7 @@ I prefer to move that line to the `.extra` file, keeping my `.bash_profile` clea
 After that, start a new terminal and run:
 
     $ type rvm | head -1
-    
+
 You should get the output `rvm is a function`.
 
 ### Usage
@@ -698,39 +717,39 @@ You can install another version with:
 To update RVM itself, use:
 
     $ rvm get stable
-    
+
 [RubyGems](http://rubygems.org/), the Ruby package manager, was also installed:
 
     $ which gem
-    
+
 Update to its latest version with:
 
     $ gem update --system
-    
+
 To install a "gem" (Ruby package), run:
 
     $ gem install <gemname>
-        
+
 To install without generating the documentation for each gem (faster):
 
     $ gem install <gemname> --no-document
-        
+
 To see what gems you have installed:
 
     $ gem list
-    
+
 To check if any installed gems are outdated:
 
     $ gem outdated
-    
+
 To update all gems or a particular gem:
 
     $ gem update [<gemname>]
-    
+
 RubyGems keeps old versions of gems, so feel free to do come cleaning after updating:
 
     $ gem cleanup
-    
+
 I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/), which is built on top of [Sass](http://sass-lang.com/):
 
     $ gem install compass --no-document
@@ -755,7 +774,7 @@ This should output some information about the compiler:
 
     lessc 1.5.1 (LESS Compiler) [JavaScript]
 
-Okay, LESS is installed and running. Great! 
+Okay, LESS is installed and running. Great!
 
 ### Usage
 
@@ -778,11 +797,11 @@ Read more about LESS on their page here: http://lesscss.org/
 Assuming that you have an account (sign up if you don't), let's install the [Heroku Client](https://devcenter.heroku.com/articles/using-the-cli) for the command-line. Heroku offers a Mac OS X installer, the [Heroku Toolbelt](https://toolbelt.heroku.com/), that includes the client. But for these kind of tools, I prefer using Homebrew. It allows us to keep better track of what we have installed. Luckily for us, Homebrew includes a `heroku-toolbelt` formula:
 
     $ brew install heroku-toolbelt
-    
+
 The formula might not have the latest version of the Heroku Client, which is updated pretty often. Let's update it now:
 
     $ heroku update
-    
+
 Don't be afraid to run `heroku update` every now and then to always have the most recent version.
 
 ### Usage
@@ -790,18 +809,18 @@ Don't be afraid to run `heroku update` every now and then to always have the mos
 Login to your Heroku account using your email and password:
 
     $ heroku login
-    
+
 If this is a new account, and since you don't already have a public **SSH key** in your `~/.ssh` directory, it will offer to create one for you. Say yes! It will also upload the key to your Heroku account, which will allow you to deploy apps from this computer.
 
 If it didn't offer create the SSH key for you (i.e. your Heroku account already has SSH keys associated with it), you can do so manually by running:
 
      $ mkdir ~/.ssh
      $ ssh-keygen -t rsa
-     
+
 Keep the default file name and skip the passphrase by just hitting Enter both times. Then, add the key to your Heroku account:
 
     $ heroku keys:add
-    
+
 Once the key business is done, you're ready to deploy apps! Heroku has a great [Getting Started](https://devcenter.heroku.com/articles/python) guide, so I'll let you refer to that (the one linked here is for Python, but there is one for every popular language). Heroku uses Git to push code for deployment, so make sure your app is under Git version control. A quick cheat sheet (if you've used Heroku before):
 
     $ cd myapp/
@@ -809,7 +828,7 @@ Once the key business is done, you're ready to deploy apps! Heroku has a great [
     $ git push heroku master
     $ heroku ps
     $ heroku logs -t
-    
+
 The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
 
 ## MongoDB
@@ -933,7 +952,3 @@ Here is a quick list of some apps I use, and that you might find useful as well:
 - [Path Finder](http://cocoatech.com/pathfinder/): I love OSX, it's Unix so great for developers, and all of it just works and looks pretty! Only thing I "miss" from Windows (OMG what did he say?), is a decent file explorer. I think Finder is a pain to use. So I gladly paid for this alternative, but I understand others might find it expensive just to not have to use Finder. **($40)**
 - [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 - [Moom](http://manytricks.com/moom/): Don't waste time resizing and moving your windows. Moom makes this very easy. **($10)**
-
-
-
-
