@@ -146,8 +146,13 @@ Download that [here](https://www.getcloudapp.com/download/mac).
 ## Facebook Messenger for Mac
 https://fbmacmessenger.rsms.me/
 
-## Homebrew
+## Backblaze
+https://www.backblaze.com/
 
+## Google File Stream
+https://support.google.com/drive/answer/7329379?hl=en
+
+## Homebrew
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
 
 ### Install
