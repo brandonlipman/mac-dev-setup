@@ -83,6 +83,17 @@ Download this from AppStore.
 ## WindowTidy
 Download this from AppStore.
 
+
+## Skype
+Download this.
+
+## Sketch The UI/UX Design Tools
+Download this.
+
+
+## Sketch The UI/UX Design Tools
+Download this.
+
 ## Alfred App
 Download this from [here](https://www.dropbox.com/downloading).
 Look up the licence info via email. Sent from license@alfredapp.com. 
@@ -224,6 +235,11 @@ At this point you can also change your computer's name, which shows up in this t
 Now we have a terminal we can work with!
 
 (Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
+
+### Setup Profiles and auto login using triggers
+https://mediatemple.net/community/products/dv/204403684/connecting-via-ssh-to-your-server
+
+## Windows VM via Appstore 
 
 ## Git
 
