@@ -1,6 +1,6 @@
 # Mac OS X Dev Setup
 Updating this setup with a few tweaks for me. 
-
+Add in https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
 This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
 The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra.
@@ -317,21 +317,23 @@ Now for the color. I'm going to change two things: the **Theme** (which is how t
 
 A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run:
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
     
-Then go to **Sublime Text 2 > Preferences > Settings - User** and add the following two lines:
+Then go to **Sublime Text> Preferences > Settings - User** and add the following two lines:
 
-    "theme": "Soda Dark.sublime-theme",
-    "soda_classic_tabs": true
+    "theme": "Adaptive.sublime-theme",
+    "color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+Final settings:
+<a href="http://share.redwhale.co/pXHn" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/0D3E2j1q1O463U1s1W30/Image%202018-02-14%20at%2012.28.36%20PM.png" style="display: block;height: auto;width: 100%;"/></a>
 
 Restart Sublime Text for all changes to take effect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
 
-The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text 2 > Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
+The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text> Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
 
-Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
+Sublime Text already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
     $ git clone https://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
     $ git clone https://github.com/miksago/jade-tmbundle Jade
     $ git clone https://github.com/danro/LESS-sublime.git LESS
@@ -342,7 +344,7 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 
     $ cd ~
     $ mkdir bin
-    $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
@@ -378,7 +380,23 @@ With that, Vim will look a lot better next time you open it!
 
 ## Python
 
-OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python 2.7.
+OS X, like Linux, ships with [Python](http://python.org/) already installed. But you don't want to mess with the system Python (some system tools rely on it, etc.), so we'll install our own version with Homebrew. It will also allow us to get the very latest version of Python. 
+
+### Python Version Control (Need more info)
+We also want to setup Python Version Manager that way we can easily run projects that require Python2 or Python3 without issues or conflicts.
+
+For this we will use Pyenv. See [install instructions](https://github.com/pyenv/pyenv#installation).
+
+    $ brew install pyenv
+
+Then edit the .bash_profile (had issue) and this was the solution accordoing to [this answer](https://github.com/pyenv/pyenv/issues/427)
+
+    export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+
+Now you should be able install different versions of python. 
 
 The following command will install Python 2.7 and any dependencies required (it can take a few minutes to build everything):
 
@@ -461,11 +479,11 @@ It will get installed in the `venv` folder, and not conflict with other projects
 As mentioned earlier, I like to install big packages (like Numpy), or packages I always use (like IPython) globally. All the rest I install in a virtualenv.
 
 ## IPython
-
+NO
 [IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
 
 ### Install
-
+No
 Before we install IPython, we'll need to get some dependencies. Run the following:
 
     $ brew update # Always good to do
@@ -499,7 +517,7 @@ Open a fresh terminal. Now when you run `$ ipy`, it will launch the QT Console w
 To use the in-line Matplotlib functionality (nice for scientific computing), run `$ ipy --pylab=inline`.
 
 ## Numpy and Scipy
-
+NO
 The [Numpy](http://numpy.scipy.org/) and [Scipy](http://www.scipy.org/SciPy) scientific libraries for Python are always a little tricky to install from source because they have all these dependencies they need to build correctly. Luckily for us, [Samuel John](http://www.samueljohn.de/) has put together some [Homebrew formulae](https://github.com/samueljohn/homebrew-python) to make it easier to install these Python libraries.
 
 First, grab the special formulae (which are not part of Homebrew core):
@@ -517,7 +535,7 @@ Finally, you can install Numpy and Scipy with:
     $ brew install scipy
     
 (It may take a few minutes to build.)
-
+## Postgres add
 ## MySQL
 
 ### Install
