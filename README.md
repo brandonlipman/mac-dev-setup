@@ -3,34 +3,58 @@ Updating this setup with a few tweaks for me.
 Add in https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode
 This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
 
-The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra.
+The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra. 
 
-- [System update](#system-update)
-- [System preferences](#system-preferences)
-- [Google Chrome](#google-chrome)
-- [iTerm2](#iterm2)
-- [Homebrew](#homebrew)
-- [Consolas](#consolas)
-- [Beautiful terminal](#beautiful-terminal)
-- [iTerm2](#iterm2)
-- [Git](#git)
-- [Sublime Text](#sublime-text)
-- [Vim](#vim)
-- [Python](#python)
-- [Virtualenv](#virtualenv)
-- [IPython](#ipython)
-- [Numpy and Scipy](#numpy-and-scipy)
-- [MySQL](#mysql)
-- [Node.js](#nodejs)
-- [JSHint](#jshint)
-- [Ruby and RVM](#ruby-and-rvm)
-- [LESS](#less)
-- [Heroku](#heroku)
-- [MongoDB](#mongodb)
-- [Redis](#redis)
-- [Elasticsearch](#elasticsearch)
-- [Projects folder](#projects-folder)
-- [Apps](#apps)
+As of October 13th, 2019 making some notes and updates based on my revised setup/flow.
+
+- [Developmemt Enviornment Setup](#developmemt-enviornment-setup)
+  - [Homebrew](#homebrew)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [Consolas](#consolas)
+  - [Beautiful terminal](#beautiful-terminal)
+    - [Setup Profiles and auto login using triggers](#setup-profiles-and-auto-login-using-triggers)
+  - [Windows VM via Appstore](#windows-vm-via-appstore)
+  - [Git](#git)
+  - [Sublime Text](#sublime-text)
+  - [Vim](#vim)
+  - [Python](#python)
+    - [Python Version Control (Need more info)](#python-version-control-need-more-info)
+    - [Pip Usage](#pip-usage)
+  - [Virtualenv](#virtualenv)
+    - [Install](#install-1)
+    - [Usage](#usage-1)
+  - [IPython](#ipython)
+    - [Install](#install-2)
+    - [Usage](#usage-2)
+  - [Numpy and Scipy](#numpy-and-scipy)
+  - [Postgres add](#postgres-add)
+  - [MySQL](#mysql)
+    - [Install](#install-3)
+    - [Usage](#usage-3)
+    - [MySQL Workbench](#mysql-workbench)
+  - [Node.js](#nodejs)
+    - [Npm usage](#npm-usage)
+  - [Ruby and RVM](#ruby-and-rvm)
+    - [Install](#install-4)
+    - [Usage](#usage-4)
+  - [LESS](#less)
+    - [Install](#install-5)
+    - [Usage](#usage-5)
+  - [Heroku](#heroku)
+    - [Install](#install-6)
+    - [Usage](#usage-6)
+  - [MongoDB](#mongodb)
+    - [Install](#install-7)
+    - [Usage](#usage-7)
+  - [Redis](#redis)
+    - [Install](#install-8)
+    - [Usage](#usage-8)
+  - [Elasticsearch](#elasticsearch)
+    - [Install](#install-9)
+    - [Usage](#usage-9)
+  - [Projects folder](#projects-folder)
+  - [Apps](#apps)
 
 
 ## System update
@@ -87,12 +111,12 @@ https://itunes.apple.com/us/app/1password-7-password-manager/id1333542190?mt=12
 Install browser extensions
 
 ## Slack
-Download this from App Store or get beta from site.
+Download this from App Store or get beta from site. Email verification for all email addresses should get all workspaces added. Check another device to ensure workspace order is same across.
 https://itunes.apple.com/us/app/slack/id803453959?mt=12
 https://slack.com/beta/mac
 
 ## WindowTidy
-Download this from AppStore.
+Download this from AppStore licence is associated there.
 https://itunes.apple.com/us/app/window-tidy/id456609775?mt=12
 
 ## Skype
@@ -102,19 +126,21 @@ https://www.skype.com/en/get-skype/
 ## Sketch The UI/UX Design Tools
 Download this.
 
-
-## Sketch The UI/UX Design Tools
+## Figma - The new Sketch replacement
 Download this.
+https://www.figma.com/downloads/
 
 ## Alfred App
-Download this from website not App Store https://www.alfredapp.com/.
+Download this from website not App Store https://www.alfredapp.com/. Should have two licences for two Macs.
 
 Look up the license info via email. Sent from license@alfredapp.com.
 Click [here](https://mail.google.com/mail/u/1/#search/license%40alfredapp.com) for Gmail search.
 
-Preferance file is in Dropbox.
+Preferance file is in Dropbox. 
 
-## Omnifocus Omnigraffle and Omniplan
+Todo Write steps for Workflow setup and syncing. 
+
+## Omnifocus Omnigraffle & Omniplan
 Download Omnifocus from [here](https://www.omnigroup.com/omnifocus).
 Download Omnigraffle from [here](https://www.omnigroup.com/omnigraffle).
 Download Omniplan from [here](https://www.omnigroup.com/omniplan).
@@ -123,25 +149,27 @@ Click [here](https://mail.google.com/mail/u/1/#search/sales%40omnigroup.com) for
 
 Setup omnisync for omnifoucs and pin to left side of doc
 
-
 ## Dropbox
 Download this from [here](https://www.dropbox.com/downloading).
+Selective syncing is important to check here. 
 
 ## Atom
 [Atom](https://atom.io/) download this.
 
-I am using Sync-Settings an Atom package that does the syncing of all packages and such.
+I am using Sync-Settings an Atom package that does the syncing of all packages and such. *
+
+*Important* Do this sync setup last after all development setup is complete.
 https://atom.io/packages/sync-settings
 
 ## Sourcetree
-[Sourcetree](https://www.sourcetreeapp.com/) download this. Setup repos in Projects folder within Development. ssh setup too
+[Sourcetree](https://www.sourcetreeapp.com/) download this. Setup repos in Projects folder within Development. ssh setup too. 
 
 ## Microsoft Office 2016 for Mac
 [Link to Login to Office365](https://login.microsoftonline.com/common/oauth2/authorize) download this.
 ``<a href="http://share.redwhale.co/pXEC" target="_blank"><img src="https://d3vv6lp55qjaqc.cloudfront.net/items/1M2q0I0r3q27420C060S/Image%202018-02-14%20at%2011.59.49%20AM.png" style="display: block;height: auto;width: 100%;"/></a>``
 
 ## CloudApp for Screenshots
-Download that [here](https://www.getcloudapp.com/download/mac).
+Download that [here](https://www.getcloudapp.com/download/mac). Settings need checked and tested due to permission errors.
 
 ## Facebook Messenger for Mac
 https://fbmacmessenger.rsms.me/
@@ -149,21 +177,29 @@ https://fbmacmessenger.rsms.me/
 ## Backblaze
 https://www.backblaze.com/
 
+## Superhuman - Email App
+Check email for download link. 
+
 ## Google File Stream
 https://support.google.com/drive/answer/7329379?hl=en
+
+# Developmemt Enviornment Setup 
 
 ## Homebrew
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
 
 ### Install
 
-An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
+An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source. In the latest version of MacOS Catalina it requires a few updates. 
 
+Use Method 2, Method 1 will work but Method 2 is easier. 
+Method 1: 
 Now, Xcode weights something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode. To do this you need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
-**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire.
+Method 2:
+**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire. 
 
 Finally, we can install Hombrew! In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
 
