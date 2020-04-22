@@ -5,6 +5,16 @@ This document describes how I set up my developer environment on a new MacBook o
 
 The document assumes you are new to Mac. Originally steps below were tested on **OS X Mountain Lion** but updating this to macOS High Sierra. 
 
+IMPORTANT: The new move away from Bash in the terminal causes problems so here is a artcile that explains how to move back
+https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/
+
+To change a user account’s default shell on macOS, simply run the chsh -s (change shell) command in a Terminal window.
+
+Change the default shell to Bash by running the following command:
+
+chsh -s /bin/bash
+You’ll have to enter your user account’s password. Finally, close the Terminal window and reopen it. You’ll be using Bash instead of Zsh.
+
 As of October 13th, 2019 making some notes and updates based on my revised setup/flow.
 
 - [Developmemt Enviornment Setup](#developmemt-enviornment-setup)
